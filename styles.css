@@ -1,26 +1,43 @@
 body {
-    background-color: black;
-    color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
+  margin: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  text-align: center;
 }
-
-h1 {
-    margin-top: 50px;
-    text-shadow: 0 0 10px cyan;
+body.menu {
+  background: url('Img/fondoIndex.png') no-repeat center center fixed;
+  background-size: cover;
+  animation: fondoAnimado 10s infinite alternate;
 }
-
-button {
-    background-color: cyan;
-    color: black;
-    padding: 15px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
+.titulo {
+  font-size: 5em;
+  text-shadow: 5px 5px 15px #000000;
+  animation: parpadeo 1.0s infinite;
+  position: absolute;
+  top: 30%;          
+  left: 50%;         
+  transform: translate(-50%, -50%);
 }
-
-button:hover {
-    background-color: magenta;
-    transform: scale(1.1);
+.btn {
+  background: #000000;
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ffffff;
+  color: #fff;                     
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  position: absolute;
+  top: 50%;          
+  left: 50%;         
+  transform: translate(-50%, -50%);
+}
+/* Animaciones */
+@keyframes parpadeo {
+  0% { opacity: 2; }
+  50% { opacity: 0.5; }
+  100% { opacity: 2; }
 }
