@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url("Img/fondoNivel3.jpg");
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.titulo {
+    text-align: center;
+    color: crimson;
+    text-shadow: 0 0 15px red;
+}
+
+.letra {
+    position: absolute;
+    font-size: 50px;
+    color: darkred;
+    margin: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.l1 { top: 50px; left: 100px; }
+.l2 { top: 200px; left: 80px; }
+.l3 { top: 150px; left: 300px; }
+.l4 { top: 250px; left: 200px; }
+.l5 { top: 100px; left: 400px; }
+
+.l1 { animation: parpadeo 2s infinite; }
+.l2 { animation: vibrar 1s infinite; }
+.l3 { animation: desvanecer 3s infinite; }
+.l4 { animation: latido 1.5s infinite; }
+.l5 { animation: girar 4s infinite; }
+
+
+@keyframes parpadeo {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0.2; }
+}
+@keyframes vibrar {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    75% { transform: translateX(3px); }
+}
+@keyframes desvanecer {
+    0% { opacity: 1; }
+    50% { opacity: 0.1; }
+    100% { opacity: 1; }
+}
+@keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.siguiente {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: crimson;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body:has(#l1:checked):has(#l2:checked):has(#l3:checked):has(#l4:checked):has(#l5:checked) .siguiente {
+    display: inline-block;
+}
+
+input { display: none; }
