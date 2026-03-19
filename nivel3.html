@@ -13,13 +13,23 @@
     <p class="pista">La luz no siempre dice la verdad</p>
 
     <div class="escena">
-
         <!-- PUERTAS -->
-        <a href="fallo.html" class="puerta p1"></a>
+        <a href="#" class="puerta p1" onclick="mostrarError(event)"></a>
         <a href="nivel4.html" class="puerta p2"></a> <!-- CAMBIA si quieres -->
-        <a href="fallo.html" class="puerta p3"></a>
+        <a href="#" class="puerta p3" onclick="mostrarError(event)"></a>
 
+        <!-- MENSAJE DE ERROR -->
+        <p id="mensaje-error"></p>
     </div>
+
+    <script>
+        function mostrarError(event) {
+            event.preventDefault(); // evita que cambie de página
+            const mensaje = document.getElementById("mensaje-error");
+            mensaje.textContent = "❌ Puerta incorrecta, intenta otra vez...";
+            mensaje.style.opacity = 1;
+        }
+    </script>
 
 </body>
 </html>
