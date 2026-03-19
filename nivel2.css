@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    height: 100vh;
+
+    background-image: url("Img/fondoNivel2.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+}
+.siguiente {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#k1:checked ~ #k2:checked ~ #k3:checked ~ #k4:checked ~ #k5:checked ~ .siguiente {
+    display: block;
+}
+main {
+  background: rgba(0, 0, 0, 0.644);
+  padding: 20px;
+  border-radius: 30px;
+  width: 25%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+}
+.titulo {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 15px;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+input {
+    display: none;
+}
+
+.llave {
+    position: absolute;
+    cursor: pointer;
+}
+
+.llave img {
+    width: 40px; 
+    transition: 0.3s;
+}
+.l1 { top: 10%; left: 5%; }
+.l2 { top: 25%; left: 85%; }
+.l3 { top: 60%; left: 15%; }
+.l4 { top: 40%; left: 70%; }
+.l5 { top: 80%; left: 50%; }
+
+.llave:hover img {
+    transform: scale(1.3);
+}
+
+#k1:checked + label img,
+#k2:checked + label img,
+#k3:checked + label img,
+#k4:checked + label img,
+#k5:checked + label img {
+    filter: drop-shadow(0 0 10px yellow);
+}   
+
+@keyframes aparecer {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
