@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Nivel 3-Terror</title>
+    <meta charset="UTF-8">
+    <title>Elige la puerta</title>
     <link rel="stylesheet" href="nivel3.css">
 </head>
 <body>
-<main>
-    <h1 class="titulo">Descubre el mensaje oculto</h1>
-</main>
 
-<input type="checkbox" id="l1">
-<label for="l1" class="letra l1">E</label>
+    <div class="overlay"></div>
 
-<input type="checkbox" id="l2">
-<label for="l2" class="letra l2">S</label>
+    <h1 class="titulo">Solo una puerta te llevará a la salida...</h1>
+    <p class="pista">La luz no siempre dice la verdad</p>
 
-<input type="checkbox" id="l3">
-<label for="l3" class="letra l3">C</label>
+    <div class="escena">
 
-<input type="checkbox" id="l4">
-<label for="l4" class="letra l4">A</label>
+        <!-- PUERTAS -->
+        <a href="fallo.html" class="puerta p1"></a>
+        <a href="nivel4.html" class="puerta p2"></a> <!-- CAMBIA si quieres -->
+        <a href="fallo.html" class="puerta p3"></a>
 
-<input type="checkbox" id="l5">
-<label for="l5" class="letra l5">P</label>
+    </div>
 
-<a href="nivel4.html" class="siguiente">Siguiente</a>
 </body>
 </html>

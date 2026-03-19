@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Georgia', serif;
+    color: #f5e6c8;
+    overflow: hidden;
+
+    /* TU IMAGEN */
+    background: url("img/final.png") no-repeat center center/cover;
+}
+
+/* Capa oscura para mejor contraste */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Contenedor principal */
+.final-container {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    animation: aparecer 2s ease;
+}
+
+/* Título épico */
+.titulo {
+    font-size: 60px;
+    letter-spacing: 5px;
+    color: #ffd700;
+
+    text-shadow:
+        0 0 10px #ffd700,
+        0 0 30px rgba(255, 215, 0, 0.6);
+
+    margin-bottom: 20px;
+}
+
+/* Texto narrativo */
+.mensaje {
+    font-size: 22px;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+.mensaje2 {
+    font-size: 16px;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Botón */
+.btn {
+    margin-top: 40px;
+    padding: 15px 30px;
+
+    background: rgba(255, 215, 0, 0.9);
+    color: black;
+
+    text-decoration: none;
+    border-radius: 8px;
+
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+/* Hover con efecto de luz */
+.btn:hover {
+    background: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px gold;
+}
+
+/* Animación */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
