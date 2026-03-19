@@ -1,10 +1,20 @@
-body.index {
+html, body {
   margin: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #fff;
-  text-align: center;
-  position: relative;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; 
 }
+
+body.index {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+}
+
 
 .fondo {
   position: fixed;
@@ -16,39 +26,43 @@ body.index {
   z-index: -1;         
 }
 
+.contenedor-inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; 
+}
+
 .titulo {
-  font-size: 5em;
-  text-shadow: 5px 5px 15px #000000;
-  animation: parpadeo 1s infinite;
-  position: absolute;
-  left: 10%;
-  transform: translate(50%, 150%);
+  font-size: clamp(3rem, 10vw, 6rem);
+  margin: 0;
+  text-shadow: 0 0 20px #000, 5px 5px 15px #000;
+  animation: parpadeo 2s infinite;
+  letter-spacing: 5px;
 }
+
 .btn {
-  background: #000000;
-  border: none;
-  padding: 15px 30px;
-  font-size: 20px;
+  margin: 10px;
+  padding: 20px 25px;
+  font-size: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: black;
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 30px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none; 
-  border-radius: 15px;
-  box-shadow: 0 0 10px #ffffff;
-  color: #fff;
-  font-family: 'Trebuchet MS', Arial, sans-serif;
-  position: absolute;
-  top: 10%;              
-  left: 50%;
-  transform: translate(-50%, 600%); 
+  transition: 0.3s;
+  text-decoration: none;
 }
+
 .btn:hover {
   background: #6b0514;
-  transform: translate(-50%, 600%) scale(1.1);
-  box-shadow: 0 0 15px #520303;
+  border-color: #ff0000;
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ff0000;
 }
 
 @keyframes parpadeo {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.3; }
 }

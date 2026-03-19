@@ -3,70 +3,88 @@ body.nivel1 {
   font-family: 'Trebuchet MS', Arial, sans-serif;
   color: white;
   text-align: center;
+
+  background-image: url("Img/fondoNivel1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-p {
-  position: absolute;
-  right: 20%;     
-  top: 15%;      
-  font-size: 25px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  text-align: center;
-}
-.fondo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+
+main {
+  background: rgba(0, 0, 0, 0.644);
+  padding: 40px;
+  border-radius: 30px;
+  width: 90%;
+  max-width: 600px;
+  
 }
 
 .titulo1 {
-  font-size: 2.5em;
-  text-shadow: 3px 3px 9px #000000;
-  position: absolute;
-  left: 1.5%;
-  margin-top: 50px;
+  font-size: 2.2em;
   text-shadow: 0 0 10px black;
+  margin-bottom: 20px;
 }
+
+.acertijo {
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
 .opciones {
-  position: absolute;
-  bottom: 15%;   
-  left: 50%;
-  transform: translateX(-50%); 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .btn {
-  margin: 20px;
-  padding: 20px 30px;
-  font-size: 25px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background: black;
   color: white;
-  border: none;
-  border-radius: 10px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 30px;
   cursor: pointer;
   transition: 0.3s;
-  
+  text-decoration: none;
 }
 
 .btn:hover {
   transform: scale(1.2);
+  background: rgb(255, 251, 251);
+  color: black;
+  box-shadow: 0 0 15px rgb(81, 194, 68);
+}
+
+.correcto {
+  border:3px solid #ffffff;
 }
 
 .error {
   display: none;
-  color: rgb(171, 0, 0);
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
-  margin-top: 50px;
-  position: absolute;
-  bottom: 10%;   
-  left: 50%;
-  transform: translateX(-50%); 
-  
+  color: rgb(255, 60, 60);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+  margin-top: 20px;
 }
 
 #error:target {
   display: block;
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
 }
