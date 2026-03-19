@@ -1,0 +1,72 @@
+body.nivel1 {
+  margin: 0;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
+p {
+  position: absolute;
+  right: 20%;     
+  top: 15%;      
+  font-size: 25px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+.fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.titulo1 {
+  font-size: 2.5em;
+  text-shadow: 3px 3px 9px #000000;
+  position: absolute;
+  left: 1.5%;
+  margin-top: 50px;
+  text-shadow: 0 0 10px black;
+}
+.opciones {
+  position: absolute;
+  bottom: 15%;   
+  left: 50%;
+  transform: translateX(-50%); 
+}
+.btn {
+  margin: 20px;
+  padding: 20px 30px;
+  font-size: 25px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
+
+.error {
+  display: none;
+  color: rgb(171, 0, 0);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  margin-top: 50px;
+  position: absolute;
+  bottom: 10%;   
+  left: 50%;
+  transform: translateX(-50%); 
+  
+}
+
+#error:target {
+  display: block;
+}
