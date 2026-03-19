@@ -1,43 +1,127 @@
-body {
+body.index {
   margin: 0;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #fff;
   text-align: center;
+  position: relative;
 }
-body.menu {
-  background: url('Img/fondoIndex.png') no-repeat center center fixed;
-  background-size: cover;
-  animation: fondoAnimado 10s infinite alternate;
+
+.fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   
+  z-index: -1;         
 }
+
 .titulo {
   font-size: 5em;
   text-shadow: 5px 5px 15px #000000;
-  animation: parpadeo 1.0s infinite;
+  animation: parpadeo 1s infinite;
   position: absolute;
-  top: 30%;          
-  left: 50%;         
-  transform: translate(-50%, -50%);
+  left: 10%;
+  transform: translate(50%, 150%);
 }
 .btn {
   background: #000000;
   border: none;
   padding: 15px 30px;
-  margin: 10px;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  text-decoration: none; 
   border-radius: 15px;
   box-shadow: 0 0 10px #ffffff;
-  color: #fff;                     
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  color: #fff;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
   position: absolute;
-  top: 50%;          
-  left: 50%;         
-  transform: translate(-50%, -50%);
+  top: 10%;              
+  left: 50%;
+  transform: translate(-50%, 600%); 
 }
-/* Animaciones */
+.btn:hover {
+  background: #6b0514;
+  transform: translate(-50%, 600%) scale(1.1);
+  box-shadow: 0 0 15px #520303;
+}
+
 @keyframes parpadeo {
-  0% { opacity: 2; }
+  0% { opacity: 1; }
   50% { opacity: 0.5; }
-  100% { opacity: 2; }
+  100% { opacity: 1; }
+}
+
+body.nivel1 {
+  margin: 0;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
+p {
+  position: absolute;
+  right: 20%;     
+  top: 15%;      
+  font-size: 25px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+.fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.titulo1 {
+  font-size: 2.5em;
+  text-shadow: 3px 3px 9px #000000;
+  position: absolute;
+  left: 1.5%;
+  margin-top: 50px;
+  text-shadow: 0 0 10px black;
+}
+.opciones {
+  position: absolute;
+  bottom: 15%;   
+  left: 50%;
+  transform: translateX(-50%); 
+}
+.btn {
+  margin: 20px;
+  padding: 20px 30px;
+  font-size: 25px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
+
+.error {
+  display: none;
+  color: rgb(171, 0, 0);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  margin-top: 50px;
+  position: absolute;
+  bottom: 10%;   
+  left: 50%;
+  transform: translateX(-50%); 
+  
+}
+
+#error:target {
+  display: block;
 }
